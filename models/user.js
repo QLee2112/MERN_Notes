@@ -5,21 +5,12 @@ const Schema = mongoose.Schema
 const SALT_ROUNDS = 6
 
 const userSchema = new Schema({
-    name: {
+    text: {
         type: String,
         required: true
     },
-    email: {
+    user: {
         type: String,
-        unique: true,
-        trim: true,
-        lowercase: true,
-        required: true
-    },
-    password: {
-        type: String,
-        trim: true,
-        minLength: 3,
         required: true
     }
 }, {
